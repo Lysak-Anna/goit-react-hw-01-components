@@ -1,14 +1,7 @@
 import PropTypes from "prop-types";
 import { Table, Header, Data } from "./TransactionHistory.styled";
-function makeFirstLetter(string) {
-    let firstLetter = string[0].toUpperCase();
-   return string = firstLetter + string.slice(1);
-}
-function tableRowsBackgroundColor(index) {
-    if (index % 2) {
-        return "#bcc3c4";
-   }
-}
+import { makeFirstLetter, tableRowsBackgroundColor } from "constants/helper";
+
 export default function TransactionHistory({items}) {
     return (
         <Table>
